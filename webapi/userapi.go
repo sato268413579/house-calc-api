@@ -38,7 +38,6 @@ func GetUser(c echo.Context) error {
 			panic(err.Error())
 		}
 		userlist[string(user.id)] = user.name
-		log.Println(user.id, user.name)
 	}
 
 	data, _ := json.Marshal(userlist)
